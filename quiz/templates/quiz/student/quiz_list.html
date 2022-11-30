@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %} - New Quizzes {% endblock title %}
+
+{% block lcontent %}
+<h1 class="flex-1 text-2xl py-3 font-bold">Quizzes and Exams</h1>
+<h2 class="flex-1 text-xl py-3 font-bold">New | <a href="{% url 'students:taken_quiz_list' %}" class="underline text-blue-500 hover:text-blue-700">Taken</a></h2>
+<table class="table-fixed rounded">
+    <thead class="border-b-4 border-black">
+      <tr>
+        <th class="w-1/2 font-bold p-3">Quiz/Exam</th>
+        <th class="w-1/5 font-bold p-3">Creator</th>
+        <th class="w-1/5 font-bold p-3">Questions</th>
+        <th class="w-1/5 font-bold p-2">Take</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for quiz in quizzes %}
+      <tr class="border-2 border-gray-200">
+        <td class="w-1/2 p-3 text-center font-semibold break-words">{{ quiz.name }}</td>
+        <td class="w-1/5 p-3 text-center font-semibold break-words">{{ quiz.owner }}</td>
+        <td class="w-1/5 p-3 text-center break-words">{{ quiz.questions_count }} questions</td>
+        <td class="w-1/5 p-2 text-center"><a href="{% url 'students:take_quiz' quiz.pk %}" class="w-36 bg-green-500 hover:bg-green-600 px-3 py-2 mt-2 rounded-md text-white">Start Quiz</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="bg-white px-2 py-3 flex items-center justify-between border-t border-gray-200 sm:px-2">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">&laquo; First</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Previous</a>
+        {% endif %}
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Last &raquo;</a>
+        {% endif %}
+
+        <p class="text-sm text-gray-700 pt-2">
+            Showing
+            <span class="font-medium">{{ page_obj.number }}</span>
+            of
+            <span class="font-medium">{{ page_obj.paginator.num_pages }}</span>
+            Pages
+          </p>
+    </span>
+  </div>
+{% endblock lcontent %}
