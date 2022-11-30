@@ -2,9 +2,9 @@
 <h1 align="center">Student Portal 📚</h1>
 <p align="center">Open Source Student Portal for Small Institutions!</p>
 <p align="center">
-<img alt="GitHub Pipenv locked Python version" src="https://img.shields.io/github/pipenv/locked/python-version/AnimeshRy/gymrocket">
-<a href="https://img.shields.io/github/issues/tsg-asya/portal-backend"><img alt="GitHub issues" src="https://img.shields.io/github/issues/tsg-asya/portal-backend"></a>
-<a href="https://img.shields.io/github/issues/tsg-asya/portal-backend/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/tsg-asya/portal-backend"></a>
+<img alt="GitHub Pipenv locked Python version" src="https://img.shields.io/github/pipenv/locked/python-version/CapstoneOLM/gymrocket">
+<a href="https://img.shields.io/github/issues/CapstoneOLMS/Student-Portal-Capstone"><img alt="GitHub issues" src="https://img.shields.io/github/issues/CapstoneOLMS/Student-Portal-Capstone"></a>
+<a href="https://img.shields.io/github/issues/CapstoneOLMS/Student-Portal-Capstone/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/CapstoneOLMS/Student-Portal-Capstone"></a>
 
 ![Website Image](./showcase.PNG)
 
