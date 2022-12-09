@@ -110,4 +110,4 @@ The Readme is a work in progress, although the app is deployed.
 This project is licensed under the GPL3 License - see the [LICENSE.md](./LICENSE) file for details
 
 
-#### Designed & Developed with love by ISU students Singh](https://github.com/CapstoneOLMS)
+#### Designed & Developed with love by ISU students(https://github.com/CapstoneOLMS)
